@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us </title>
+  <link rel="stylesheet" href="Contact.css">
+   <!-- Font Awesome Cdn Link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <button class="back"><a href="Home.html" ><b>Back</b></a></button>
+  <div class="wrapper">
+    <h1>Hello </h1>
+    <p>You can <br> Contact us here</p>
+    <form>
+      <input type="text" placeholder="Name" id="name">
+      <input type="email" placeholder="Email" id="email">
+      <input type="textfield" placeholder="Message" id="message">
+      <button id="btn">Submit</button>
+      
+    <closeform></closeform></form>
+  
+  </div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    var btn = document.getElementById('btn');
+    btn.addEventListener('click',function(e){
+      e.preventDefault()
+      var name=document.getElementById('name').value;
+      var email=document.getElementById('email').value;
+      var message=document.getElementById('message').value;
+      var body = 'name:' + name +   '<br/> email:'+ email + '<br/> message:' + message;
+
+
+
+
+
+
+             Email.send({
+                SecureToken : "8fb5e635-d6e3-45c6-b48f-5e9b71c02071",
+                To : email,
+               From : "t67076203@gmail.com",
+                Subject : "This is the subject",
+                Body : body
+              }).then(
+                  message => alert(message)
+              );
+  })
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
+</body>
+</html>

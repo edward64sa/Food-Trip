@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="menu.js" async></script>
+    <title>Menu </title>
+</head>
+
+<body>
+    <div id="loading">
+        
+   </div>
+  
+    
+      <header>
+        <button class="back"><a href="Home.html" ><b>Back</b></a></button>
+        
+    </header>
+    <section class="container">
+        
+        <div class="container-items">
+            <div class="item">
+                <span class="title-item">Dal Makhni</span>
+                <img src="img/Dal Makhni .jpeg" alt="" class="img-item">
+                <span class="price-item">$15</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Jalebi</span>
+                <img src="img/Jalebi Recipe.jpeg" alt="" class="img-item">
+                <span class="price-item">$25</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Samosa</span>
+                <img src="img/Paneer Samosa.jpeg" alt="" class="img-item">
+                <span class="price-item">$35</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Veg Sub</span>
+                <img src="img/Veg Sub.jpeg" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Masala Chai</span>
+                <img src="img/Masala Chai Tea.jpeg" alt="" class="img-item">
+                <span class="price-item">$32</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Pakados</span>
+                <img src="img/Pakados.png" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Chole Bhature</span>
+                <img src="img/Chole Bhature.jpeg" alt="" class="img-item">
+                <span class="price-item">$15</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Dosa</span>
+                <img src="img/Dosa.jpeg" alt="" class="img-item">
+                <span class="price-item">$25</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Gulab Jamun</span>
+                <img src="img/gjamun.jpeg" alt="" class="img-item">
+                <span class="price-item">$35</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Paneer Makhni</span>
+                <img src="img/Paneer Makhani Recipe.jpeg" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Rajma</span>
+                <img src="img/Rajma.jpeg" alt="" class="img-item">
+                <span class="price-item">$32</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Thali</span>
+                <img src="img/Thali Meals For Festivals.png" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">White Sauce Pasta</span>
+                <img src="img/White sauce pasta.jpeg" alt="" class="img-item">
+                <span class="price-item">$15</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Chicken Wings</span>
+                <img src="img/2.PNG" alt="" class="img-item">
+                <span class="price-item">$25</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Grilled Fish</span>
+                <img src="img/3.PNG" alt="" class="img-item">
+                <span class="price-item">$35</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Coconut Custard</span>
+                <img src="img/4.PNG" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Greek Salad</span>
+                <img src="img/5.PNG" alt="" class="img-item">
+                <span class="price-item">$32</span>
+                <button class="btn-item">Add</button>
+            </div>
+            <div class="item">
+                <span class="title-item">Veg Pizza</span>
+                <img src="img/6.PNG" alt="" class="img-item">
+                <span class="price-item">$18</span>
+                <button class="btn-item">Add</button>
+            </div>
+           
+          
+        </div>
+        
+        <!-- Cart -->
+        <div class="cart" id="cart">
+            <div class="header-cart">
+                <h2>Added To Cart</h2>
+            </div>
+            
+
+            <div class="cart-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-title">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-price">$15.000,00</span>
+                    </div>
+                   <span class="btn-Remove">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-title">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-price">$18.000,00</span>
+                    </div>
+                   <button class="btn-Remove">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="cart-total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="cart-price-total">
+                        $120
+                    </span>
+
+
+
+
+
+
+
+
+                </div>
+                <button class="btn-pay">Pay <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+        
+    </section>
+    
+               <!--    <iframe  width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KVbrHTRxgsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+  
+                
+                
+    <script>
+        
+        // var loader = document.getElementById("loading");
+        // window.addEventListener("load" , function(){
+        //   loader.style.display = "none";
+        // });
+
+    //     $(document).ready(function(){
+    //     $(window).load(function(){
+    //         $("#loading").fadeOut("slow");
+    //     })
+    // })
+     
+
+
+    var loader;
+    function loadNow(opacity) {
+        if(opacity <= 0) {
+            // displayContent();
+        }
+        else{
+            loader.style.opacity=opacity;
+            window.setTimeout(function(){
+                loadNow(opacity - 0)
+        },160
+            );
+        }
+    }
+    // function displayContent(){
+    //     loader.style.display='none';
+    //     document.getElementById('loading').style.display='block';
+    // }
+    document.addEventListener("DOMContentLoaded", function(){
+        loader = document.getElementById('loading');
+        loadNow(1);
+    })
+    
+          
+      </script>
+</body>
+
+</html>

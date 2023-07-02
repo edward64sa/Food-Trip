@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Login &signup page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="logemail" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="logpass" placeholder="Password" />
+            </div>
+           
+            <button class="btn solid" id="loging" ><a href="Home.html" id="log1"> Login</a></button>
+           
+          </form>
+          <form action=""  method="post" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text"  id="username" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+            <!-- <div class="social-media">
+              <i class="fa-brands fa-google"></i>
+            </div> -->
+            <button type="button" id="register" name="register" class="btn ">Sign Up</button>
+           
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+          
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+        
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+         
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyCar_u5PDE0af_fzAiueOgDyLC_tCgxOjk",
+        authDomain: "logreg-b08ba.firebaseapp.com",
+        projectId: "logreg-b08ba",
+        storageBucket: "logreg-b08ba.appspot.com",
+        messagingSenderId: "13213971009",
+        appId: "1:13213971009:web:3e7bd81ba608e335dc0cc0",
+        measurementId: "G-TNSCDXHYDH"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+	  const analytics = getAnalytics(app);
+	  const auth = getAuth();
+	  console.log(app);
+
+	  
+
+	  // register
+	  document.getElementById("register").addEventListener("click", function() {
+      var username =  document.getElementById("username").value;
+      
+		  var email =  document.getElementById("email").value;
+		  var password = document.getElementById("password").value;
+		  //new register
+		  createUserWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Sign in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert("Registration successfully!!");
+		    
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    // ..
+		    console.log(errorMessage);
+		    alert(error);
+		  });		  		  
+	  });
+
+
+    document.getElementById("loging").addEventListener("click", function() {
+		  var email =  document.getElementById("logemail").value;
+		  var password = document.getElementById("logpass").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Sign in 
+		    const user = userCredential.user;
+		    console.log(user);
+		    alert(user.email+" Login successfully!!!");
+		    document.getElementById('logout').style.display = 'block';
+		   
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });	
+      if (password>6)	  	{
+        return  false;
+
+      }	 
+      
+      
+      else  {
+        return true;
+      } 
+	  });
+    </script>
+  </body>
+</html>
